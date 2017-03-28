@@ -1,0 +1,27 @@
+{
+  "name": "AwesomeTweets",
+  "version": "0.0.1",
+  "author": "Josh Gamble",
+  "description": "Bunch of Awesome Tweets",
+  "scripts": {
+    "start": "nodemon app.js",
+    "debug": "nodemon --inspect app.js",
+    "db:drop": "dropdb -e ned",
+    "db:create": "createdb -e ned",
+    "db:reset": "yarn db:drop && yarn db:create",
+    "db:migrate": "node db/migrate.js",
+    "db:seed": "node db/seed.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "^2.5.6",
+    "express": "~4.14.1",
+    "morgan": "~1.7.0",
+    "nodemon": "^1.11.0",
+    "pg-promise": "^5.6.4",
+    "pug": "~2.0.0-beta10",
+    "serve-favicon": "~2.3.2"
+  }
+}

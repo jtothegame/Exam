@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <img alt="Brand" src="/images/JG.jpg" style="width:50px; height: 50px;">
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+        <li class="active"><a href="/dashboard">Dashboard</a></li>
+     </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-lg-3">
+          <img src="/images/murderface.jpg" style="width: 100px; height: 100px;"/>
+          <h4>Josh Gamble</h4>
+          <h5>@jtothegame</h5><br>
+          <h5>Messages</h5>
+          <h4>12</h4><hr>
+            <div class="col-lg-3" style="width: 100%; margin: 0px; padding: 0px;">
+              <h2>Trending AweTweets</h2><br>
+              <ul>
+                <li>#Things</li>
+                <li>#WinterisHere</li>
+                <li>#TrumpisaLump</li>
+                <li>#BetterGetThatCheckedASAP</li>
+                <li>#Node8inApril</li>
+                <li>#OprahGaveEveryoneAThing</li>
+              </ul>
+            </div>
+        </div>
+
+      <div class="col-lg-8 col-md-5 col-sm-3" style="height: 100vh;">
+
+          <form method="post" action='/dashboard'>
+            <div>
+              <label for="name">Username: </label><br>
+              <input id="name" name="name" placeholder="Username" style="width: 20vw;"/>
+            </div><br>
+
+            <div>
+              <label for="tweet">Tweet: </label><br>
+              <textarea id="tweet" name="tweet" placeholder="Tweet" style="width: 60vw" rows="8";></textarea><br><br>
+              <button type="submit" class="btn btn-success" style="align-items: right;">Tweet!</button>
+            </div>
+
+          </form>
+          <hr>
+
+
+
+
+    </div>
+</div>
+
+<%- include('partials/footer') %>
