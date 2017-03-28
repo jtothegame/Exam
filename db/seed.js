@@ -6,15 +6,16 @@ for (let i = 0; i < 20; i += 1) {
   // of the object in the second argument
   // $<content> also refers to the property of the same name
   db.query(`
-    INSERT INTO tweets (name, tweet) VALUES ($<name>, $<tweet>)
+    INSERT INTO posts (name, content) VALUES ($<title>, $<content>)
   `, {
     title: `${faker.hacker.noun()}`,
-    content: `${faker.hacker.phrase()}`
-  }
-  ).then(function () {
+    content: `${faker.hacker.phrase()}`,
+    time: `${faker.date.recent()}`
+  }).then(function () {
     console.log(`💣 Created tweet`);
 
     // only exit node on the last insert
     if (i === 19) process.exit();
-  })
+  }).catch(function(err){console.log(err);})
+
 }

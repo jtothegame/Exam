@@ -8,7 +8,8 @@ db.query(`
  CREATE TABLE posts (
     id SERIAL PRIMARY KEY NOT NULL,
     name TEXT NOT NULL,
-    content CHAR(255) NOT NULL;
+    content CHAR(255) NOT NULL,
+    time timestamp DEFAULT current_timestamp
   )
 `).then(function () {
   // .then is a method that takes a callback which will be run after the query is complete and is successful.
